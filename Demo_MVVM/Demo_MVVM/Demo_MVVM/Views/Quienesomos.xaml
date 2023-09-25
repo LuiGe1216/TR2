@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demo_MVVM.Views.Quienesomos">
+    <!-- Fondo de la página -->
+
+    <ContentPage.Content>
+        <!-- StackLayout para agrupar los elementos -->
+        <ScrollView>
+            <Grid>
+                <!-- Imagen de fondo -->
+                <Image Source="fondback.jpg"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+
+                <BoxView BackgroundColor="#C0E4FFAA"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+                <StackLayout Padding="20" Spacing="10">
+                <!-- Título centrado -->
+                <Label Text="QUIENES SOMOS"
+                     FontAttributes="Bold" 
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="44"
+                   TextColor="#00007F"
+                    Opacity="0.5" 
+                  
+                     />
+
+                <Frame BackgroundColor="LightCyan"
+                   CornerRadius="10"
+                   HasShadow="True">
+                    <StackLayout Spacing="20" Padding="10">
+
+                        <Image Source="ima1.jpeg" 
+                           HorizontalOptions="Center"
+                          VerticalOptions="Center"
+                          WidthRequest="200" HeightRequest="200" />
+
+
+
+                        <Label Text="Somos Travelling-Viajes, la aerolínea con mayor experiencia en el mercado nacional. Nos enorgullece ofrecer el mejor servicio a bordo, junto con una impecable puntualidad, eficiencia y una respuesta ágil y adaptada a las necesidades y expectativas de nuestros pasajeros.Damos seguridad y una atención personalizada a cada uno de nuestros pasajeros. 
+"
+                           
+                           
+                           FontSize="16"
+                           TextColor="#00007F"
+                            HorizontalTextAlignment="Center" ></Label>
+
+
+
+                        <Image Source="log1.jpeg" 
+       Opacity="0.2"
+                   HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="CenterAndExpand"
+                  WidthRequest="150" HeightRequest="150" 
+       />
+
+
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

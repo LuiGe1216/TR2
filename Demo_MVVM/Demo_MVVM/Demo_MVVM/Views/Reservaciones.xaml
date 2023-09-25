@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demo_MVVM.Views.Reservaciones">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <!-- Imagen de fondo -->
+                <Image Source="fondback.jpg"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+
+                <BoxView BackgroundColor="#C0E4FFAA"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+
+                <Frame BackgroundColor="#800080E4" CornerRadius="10" Margin="20">
+                    <StackLayout Padding="10">
+                        <Label Text="¡Bienvenido, Realiza tu reserva AHORA!" FontSize="35" HorizontalOptions="CenterAndExpand" TextColor="Black" FontAttributes="Bold" />
+
+                        <Label Text="Reserva de Lugar" FontSize="Large" Margin="10,20,10,0" TextColor="Black" FontAttributes="Bold" />
+
+                        <Label Text="Nombre del Lugar:" FontSize="Medium" Margin="10,20,10,0" TextColor="Black" FontAttributes="Bold" />
+                        <Label x:Name="NombreLugarLabel" FontSize="Medium" Margin="10,0,10,20" TextColor="Black" />
+
+                        <Label Text="Costo:" FontSize="Medium" Margin="10,0,10,0" TextColor="Black" FontAttributes="Bold" />
+                        <Entry x:Name="CostoEntry" Placeholder="Ingrese el costo" Margin="10,0,10,20" TextColor="Black" />
+
+                        <Label Text="Ingresar Nombres:" FontSize="Medium" Margin="10,0,10,0" TextColor="Black" FontAttributes="Bold" />
+                        <Entry x:Name="NombresEntry" Placeholder="Ingrese sus nombres" Margin="10,0,10,20" TextColor="Black" />
+
+                        <Button Text="Confirmar Reserva" FontSize="20" FontAttributes="Bold" Clicked="OnConfirmarClicked" HorizontalOptions="CenterAndExpand" TextColor="Purple" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

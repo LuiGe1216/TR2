@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             x:Class="Demo_MVVM.Views.MapPage">
+
+    <Grid>
+        <!-- Imagen de fondo -->
+        <Image Source="fondback.jpg"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+
+        <BoxView BackgroundColor="#C0E4FFAA"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+        <StackLayout Margin="25">
+        <maps:Map x:Name="map" MapType="Hybrid" />
+        <Button x:Name="ReservarButton" Text="Ver más" IsVisible="False" Clicked="OnReservarClicked" />
+    </StackLayout>
+    </Grid>
+    
+</ContentPage>

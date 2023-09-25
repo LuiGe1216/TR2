@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demo_MVVM.Views.Register"
+             Title="Registro">
+    <StackLayout Padding="20" BackgroundColor="#0D4E90" >
+        <Label Text="Regístrate" FontSize="40" FontAttributes="Bold" Margin="0,20,0,0" HorizontalOptions="Center" TextColor="#CCE4FC"/>
+        <Frame VerticalOptions="FillAndExpand" Margin="20" CornerRadius="20" HasShadow="False" BackgroundColor="DeepSkyBlue">
+            <StackLayout>
+                <Entry Placeholder="Nombre" x:Name="txtNombre" Text="{Binding Name}" Keyboard="Text" TextColor="Black" />
+                <Entry Placeholder="Apellidos" x:Name="txtApellidos" Text="{Binding Apellidos}" Keyboard="Text" TextColor="Black" />
+                <Entry Placeholder="Dni" x:Name="txtDNI" Text="{Binding Dni}" Keyboard="Numeric"  MaxLength="8" TextColor="Black" />
+                <Entry Placeholder="Email" x:Name="txtEmail" Text="{Binding Email}" Keyboard="Email" TextColor="Black" />
+                <Entry Placeholder="Edad" x:Name="txtEdad" Text="{Binding Edad}" Keyboard="Numeric"  MaxLength="2" TextColor="Black" />
+                <Entry Placeholder="Nombre de usuario" x:Name="txtUsuario" Text="{Binding NombreUsuario}" TextColor="Black" />
+                <Entry Placeholder="Contraseña" x:Name="txtPassword" Text="{Binding Contrasena}" IsPassword="true" TextColor="Black" />
+                <Button Text="Registrarse" Command="{Binding RegistrarCommand}" HorizontalOptions="Center" Padding="10" CornerRadius="10" BackgroundColor="#0D4E90" TextColor="Blue"/>
+            </StackLayout>
+        </Frame>
+        
+    </StackLayout>
+</ContentPage>

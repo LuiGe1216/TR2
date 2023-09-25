@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demo_MVVM.Views.inicio"
+             BackgroundColor="#C0E4FF">
+
+    <ContentPage.Content>
+        <!-- StackLayout para agrupar los elementos -->
+        <ScrollView>
+            <Grid>
+                <!-- Imagen de fondo -->
+                <Image Source="fondback.jpg"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+
+                <BoxView BackgroundColor="#C0E4FFAA"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+
+                <StackLayout Padding="5" Spacing="1">
+            <Label Text="¡ BIENVENIDO !"
+            HorizontalOptions="CenterAndExpand"
+            FontSize="32"
+            TextColor="SlateBlue"
+            Margin="0,3,0,10"
+            FontAttributes="Bold"
+            FontFamily="Georgia-Bold" />
+
+            <Frame BackgroundColor="LightGoldenrodYellow"
+                   BorderColor="White"
+                   CornerRadius="40"
+                   Padding="20"
+                   Margin="20,30,20,-80"
+                   HasShadow="True">
+
+                <Label Text="Bienvenido a nuestra página principal de Traveling-viajes. Aquí encontrarás información sobre destinos emocionantes, ofertas especiales y consejos para tus próximas aventuras. Planifica tu viaje con nosotros y descubre el mundo." 
+                          FontSize="14"
+                           TextColor="DarkOliveGreen"
+                           HorizontalTextAlignment="Center" />
+
+            </Frame>
+            <BoxView HeightRequest="45" BackgroundColor="Transparent" />
+
+            <Image Source="log.png"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" Margin="5">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImageButtonTapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <!-- Imagen como botón -->
+           
+            <!-- BOTON -->
+
+            <Frame BackgroundColor="CadetBlue"  
+                   WidthRequest="50"
+                   HeightRequest="50"
+                   CornerRadius="50"
+                   HorizontalOptions="Center">
+                <Button Text="SALIR" Clicked="Button_Clicked"
+                        BackgroundColor="LavenderBlush"    
+                        TextColor="CadetBlue"
+                        CornerRadius="100"
+                        Font="12"
+                        HeightRequest="100"
+                        WidthRequest="100" />
+            </Frame>
+        </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

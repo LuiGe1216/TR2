@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Demo_MVVM.Views"
+             x:Class="Demo_MVVM.Views.ListProductView"
+             Title="Vuelos">
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Fila 0: Barra de búsqueda y botón "Más detalles" -->
+            <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="0" BackgroundColor="LightBlue">
+                <Entry Placeholder="Buscar" TextColor="Black" Text="{Binding SearchTerm}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Más detalles" Clicked="Button_Clicked" Command="{Binding GoToDetailsCommand}"  />
+            </StackLayout>
+
+            <!-- Fila 1: Lista de productos -->
+            <Frame BackgroundColor="#3498db" Padding="5" CornerRadius="10" Grid.Row="1">
+                <CollectionView x:Name="miListView" ItemsSource="{Binding FilteredProducts}" SelectionMode="Single">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="White" CornerRadius="10" Padding="10" HasShadow="True" HeightRequest="200" >
+                                <StackLayout>
+                                    <Image Source="{Binding ImagePath}" Aspect="AspectFill" HeightRequest="150" />
+                                    <Label Text="{Binding Destino}" TextColor="Black" FontSize="16" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
+                                    <Label Text="{Binding Precio, StringFormat='Precio: S/ {0:N2}'}" TextColor="Gray" FontSize="14" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Frame>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+
+

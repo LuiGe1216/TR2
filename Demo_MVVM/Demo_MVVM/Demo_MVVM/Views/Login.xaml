@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demo_MVVM.Views.Login"
+             Title="Inicio de Sesión">
+    <ScrollView>
+        <StackLayout Padding="20" BackgroundColor="#0D4E90" >
+        <Label Text="Inicia Sesión" FontSize="40" FontAttributes="Bold" Margin="0,20,0,0" HorizontalOptions="Center" TextColor="#CCE4FC"/>
+            <Frame VerticalOptions="FillAndExpand" Margin="20" CornerRadius="20" HasShadow="False" BackgroundColor="#FFFFFF">
+                <StackLayout  Spacing="20">
+                    <Image Source="logo.jpg" HeightRequest="120" WidthRequest="120" />
+                    <Frame    CornerRadius="20" HasShadow="False" BackgroundColor="#CCE4FC" BorderColor="#0D4E90">
+                        <StackLayout>
+                            <Entry Placeholder="Nombre de usuario" x:Name="txtUsername" Text="{Binding NombreUsuario}" TextColor="#0D4E90"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame    CornerRadius="20" HasShadow="False" BackgroundColor="#CCE4FC"  BorderColor="#0D4E90">
+                        <StackLayout>
+                            <Entry Placeholder="Contraseña" x:Name="txtPassword" Text="{Binding Contrasena}" IsPassword="true" TextColor="#0D4E90" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Button Text="Iniciar Sesión"  Command="{Binding IniciarSesionCommand}" HorizontalOptions="Center" Padding="10" CornerRadius="10" BackgroundColor="#0D4E90" TextColor="White"  VerticalOptions="Center" Margin="0,10,0,0"/>
+                    <Label HorizontalOptions="Center">OR</Label>
+                    <Button Text="Registrarse" Clicked="Button_Clicked" HorizontalOptions="Center" Padding="10" CornerRadius="10" BackgroundColor="#0D4E90" TextColor="White" VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demo_MVVM.Views.Contactos">
+    <ScrollView>
+        <Grid>
+            <!-- Imagen de fondo -->
+            <Image Source="fondback.jpg"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+
+            <BoxView BackgroundColor="#C0E4FFAA"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+            <StackLayout>
+                <Frame BackgroundColor="#06318A" Padding="24" CornerRadius="0">
+                    <Label Text="Contactos" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+                </Frame>
+                <Frame CornerRadius="5" BackgroundColor="#92B5FF" Margin="20,20,20,20">
+                    <Label Text="Recuerda que para cualquier consulta, puedes contactarnos por los siguientes medios:" Padding="5,5,5,5" FontAttributes="Bold" TextColor="#06318A"/>
+                </Frame>
+                <Image Source="whatsapp.png" WidthRequest="100" HeightRequest="100"/>
+                <Button HorizontalOptions="Center" Text="Ir Whatsapp" BackgroundColor="#31934B" TextColor="White" Clicked="Button_Clicked" />
+                <BoxView HeightRequest="45" BackgroundColor="Transparent" />
+                <Image Source="gmail.png" WidthRequest="100" HeightRequest="100"/>
+                <Button HorizontalOptions="Center" Text="Ir Gmail" BackgroundColor="#C02B13" TextColor="White" Clicked="Button_Clicked_1" />
+                <BoxView HeightRequest="45" BackgroundColor="Transparent" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

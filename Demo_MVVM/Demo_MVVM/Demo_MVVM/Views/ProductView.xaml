@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Demo_MVVM.ViewModels"
+             x:Class="Demo_MVVM.Views.ProductView"
+             Title="Reserva">
+    <ContentPage.BindingContext>
+        <vm:ProductViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Image Source="fondback.jpg"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+
+                <BoxView BackgroundColor="#C0E4FFAA"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+                <StackLayout>
+
+
+                    <Frame BackgroundColor="#E8D8FFAA" CornerRadius="10" Margin="20">
+                        <StackLayout Margin="10" Spacing="40">
+                            <Label Text="* DESTINO" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="{Binding Destino, StringFormat=' {0:dy}'}" FontSize="20" FontAttributes="Bold" />
+
+                            <Label Text="* FECHA VUELO" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="{Binding Fecha, StringFormat=' {0:dd/MM/yyyy}'}" FontSize="20" FontAttributes="Bold" />
+
+                            <Label Text="* PRECIO" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="{Binding Precio, StringFormat=' S/ {0:N2}'}" FontSize="20" FontAttributes="Bold" />
+
+                            <Picker Title="Número de pasajeros" SelectedItem="{Binding NumeroPasajeros}" FontAttributes="Bold">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:Int32}">
+                                        <x:Int32>1</x:Int32>
+                                        <x:Int32>2</x:Int32>
+                                        <x:Int32>3</x:Int32>
+                                        <x:Int32>4</x:Int32>
+                                        <x:Int32>5</x:Int32>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox IsChecked="{Binding IsCheckBoxChecked}"  />
+                                <Label Text="Active para recibir notificaciones de ofertas" VerticalOptions="Center" />
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                                <Button Grid.Row="4" Clicked="SendButton_Clicked" Grid.Column="0" Text="Enviar correo" FontAttributes="Bold" Command="{Binding SendEmailCommand}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
