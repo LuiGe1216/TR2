@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\windows\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM.csproj": {}
+    "C:\\Users\\Academico\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\windows\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM.csproj": {
+    "C:\\Users\\Academico\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\windows\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM.csproj",
+        "projectUniqueName": "C:\\Users\\Academico\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM.csproj",
         "projectName": "Demo_MVVM",
-        "projectPath": "C:\\Users\\windows\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM.csproj",
-        "packagesPath": "C:\\Users\\windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\windows\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\obj\\",
+        "projectPath": "C:\\Users\\Academico\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM.csproj",
+        "packagesPath": "C:\\Users\\Academico\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Academico\\Downloads\\Demo_MVVM\\Demo_MVVM\\Demo_MVVM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Academico\\Downloads\\NuGet.Config",
+          "C:\\Users\\Academico\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,7 +28,8 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://botbuilder.myget.org/F/botbuilder-v4-dotnet-daily/api/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -83,7 +85,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
